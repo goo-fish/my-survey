@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="styles.css" />
+        <title>My Survey</title>
+    </head>
+    <body>
+        <h1 id="title">Hello Survey!</h1>
+        <p id="description">Here is a basic survey with nothing special</p>
+        <form id="survey-form">
+            <fieldset>
+                <legend>👤 Personal Information</legend>
+                <label for="name" id="name-label">Name:</label>
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Type your name here..."
+                    required
+                />
+                <label for="email" id="email-label">Email:</label>
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Enter your email address..."
+                    required
+                />
+                <label for="number" id="number-label">Age:</label>
+                <input
+                    type="number"
+                    id="number"
+                    placeholder="How old are you?"
+                    min="1"
+                    max="120"
+                    required
+                />
+                <label for="bio" id="bio-label">Bio:</label>
+                <textarea
+                    id="bio"
+                    placeholder="Tell us about yourself..."
+                    required
+                ></textarea>
+            </fieldset>
+            <fieldset>
+                <legend>🎯 Experience Level</legend>
+                <label class="inline"><input checked type="radio" name="level" value="beginner"> Beginner</label>
+                <label class="inline"><input type="radio" name="level" value="intermediate"> Intermediate</label>
+                <label class="inline"><input type="radio" name="level" value="advanced"> Advanced</label>
+                <label class="inline"><input type="radio" name="level" value="expert"> Expert</label>
+                <label for="dropdown">Experience:</label>
+                    <select id="dropdown" name="exp">
+                        <option value="1">1-6 Months</option>
+                        <option value="2">1 Year</option>
+                        <option value="3">3 Years</option>
+                        <option value="4">More Than 3 Years</option>
+                    </select>
+                <label>Programming Languages:</label>
+                <label class="inline"><input type="checkbox" name="lang" id="html" value="html"> HTML</label>
+                <label class="inline"><input type="checkbox" name="lang" id="css" value="css"> CSS</label>
+                <label class="inline"><input type="checkbox" name="lang" id="js" value="js"> JavaScript</label>
+            </fieldset>
+            <fieldset>
+                <legend>📋 Terms & Privacy</legend>
+                <h4><a href="https://www.icann.org/privacy/tos">Terms of Service</a> and <a href="https://www.icann.org/privacy/policy">Privacy Policy</a></h4>
+                <label><input type="radio" name="tos" value="agree"> I agree with the ToS and Privacy Policy</label>
+                <label><input checked type="radio" name="tos" value="disagree"> I disagree with the ToS and Privacy Policy</label>
+            </fieldset>
+            <input type="submit" id="submit" name="submit" value="Submit Survey">
+        </form>
+    </body>
+</html>
